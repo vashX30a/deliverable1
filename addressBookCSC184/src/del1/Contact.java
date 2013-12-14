@@ -2,26 +2,39 @@ package del1;
 
 public class Contact {
 	
-	private	String fName, lName, address, city, state, pNumber;
-	private	int zipCode;
+	private	String fName, lName, address, city, state, pNumber, zipCode;
+	
+	public Contact(){
+		
+	}
 	
 	public Contact(String fName, String lName){
 		this.fName = fName;
 		this.lName = lName;
-		address = city = state = pNumber = null;
-		zipCode = 0000; 
+		zipCode = address = city = state = pNumber = null;
 	}
 	
-	public Contact(String fName, String lName, String address, String city, String state, String pNumber){
+	public Contact(String fName, String lName, String address, String city, String state, String pNumber, String zipCode){
 		this.fName = fName;
 		this.lName = lName;
 		this.address = address;
 		this.city = city;
 		this.state = state;
 		this.pNumber = pNumber;
+		this.zipCode = zipCode;
 	}
 	
-	public void setZipCode(int zipCode){
+	public void setAll(String fName, String lName, String address, String city, String state, String pNumber, String zipCode){
+		this.fName = fName;
+		this.lName = lName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.pNumber = pNumber;
+		this.zipCode = zipCode;
+	}
+	
+	public void setZipCode(String zipCode){
 		this.zipCode = zipCode;
 	}
 	
@@ -65,8 +78,18 @@ public class Contact {
 		return pNumber;
 	}
 	
-	public int getZipCode(){
+	public String getZipCode(){
 		return zipCode;
 	}
 	
+	
+	
+	/*
+	public static void main(String args[]){
+	 
+		int x = 10;
+		System.out.println("Code: " + x);
+		
+	}
+	*/
 }
